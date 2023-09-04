@@ -5,12 +5,12 @@ import json
 # 실행전에 꼭 설정 하세요. 
 project_name = "piki"
 
-input_dir = r"C:\Users\master\Project\python\translate\input"
+input_dir = r"C:\Users\master\Project\Git\python_toys\translate\input"
 
 ko_translated_filename = "ko_20230811.xlsx"
-en_translated_filename = "en_20230811.xlsx"
+en_translated_filename = "en_20230829.xlsx"
 ja_translated_filename = "koong_ja_20230619.xlsx"
-th_translated_filename = "th_20230811.xlsx"
+th_translated_filename = "th_20230829.xlsx"
 
 # ko_translated_filename = "koong_ko_20230602.xlsx"
 # en_translated_filename = "koong_en_20230619.xlsx"

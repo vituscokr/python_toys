@@ -4,7 +4,7 @@ from datetime import datetime
 import os 
 
 project_dir = r"C:\Users\master\Project\piki\assets\translations"
-output_dir = r"C:\Users\master\Project\python\translate\output"
+output_dir = r"C:\Users\master\Project\Git\python_toys\translate\output"
 def get_filpath(type):    
     now = datetime.now()
     date = str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2)
