@@ -3,6 +3,7 @@ from database import get_db
 from sqlalchemy.orm import Session
 
 from domain.question import question_schema, question_crud
+from starlette import status
 
 router = APIRouter(
     prefix="/api/question",
@@ -17,3 +18,10 @@ def question_list(db: Session = Depends(get_db)):
 def question_detail(question_id: int, db: Session = Depends(get_db)):
     _question = question_crud.get_question(db, question_id=question_id)
     return _question
+
+@router.post("",status_code=status.HTTP_204_NO_CONTENT)
+def question_create(_question_create:question_schema.QuestionCreate,
+                    db: Session= Depends(get_db)):
+    print(_question_create.content)
+    print(_question_create.subject)
+    question_crud.create_question(db=db, question_create=_question_create)

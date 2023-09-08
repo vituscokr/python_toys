@@ -11,9 +11,26 @@
   
     get_question_list()
   </script>
+
+  <div class="container my-3">
+    <table class="table">
+      <thead>
+        <tr class="table-dark">
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성일시</th>
+        </tr>
+      </thead>
+      <tbody>
+        {#each question_list as question, i}
+        <tr>
+          <td>{i+1}</td>
+          <td><a use:link href='/question/{question.id}'>{question.subject}</a></td>
+          <td>{question.create_date}</td>
+        </tr>
+        {/each}
+      </tbody>
+    </table>
+    <a use:link href="/question_create" class="btn btn-primary">질문 등록하기</a>
+  </div>
   
-  <ul>
-    {#each question_list as question}
-    <li><a use:link href='/question/{question.id}'>{question.subject}</a></li>
-    {/each}
-  </ul>
