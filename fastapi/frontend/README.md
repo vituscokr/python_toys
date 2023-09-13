@@ -48,3 +48,7 @@ export default writable(0)
 
 [읽어볼것 ]
 https://svelte.dev/tutorial/writable-stores
+
+2023년 9월 13일
+.gitignore 에서 
+[dist 삭제] 
