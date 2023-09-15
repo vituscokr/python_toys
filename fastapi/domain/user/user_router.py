@@ -11,7 +11,10 @@ from domain.user import user_crud, user_schema
 from domain.user.user_crud import pwd_context
 
 from starlette.config import Config
-config = Config('.env')
+from dotenv import load_dotenv
+
+load_dotenv()
+config = Config()
 ACCESS_TOKEN_EXPIRE_MINUTES = int(config('ACCESS_TOKEN_EXPIRE_MINUTES'))
 SECRET_KEY = config('SECRET_KEY')
 
